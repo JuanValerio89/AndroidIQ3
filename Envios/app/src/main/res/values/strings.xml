@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Rastreo de envios</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">H-AVR</string>
+    <string name="nav_header_subtitle">ventas@h-avr.com</string>
+    <string name="nav_header_desc">Navegacion</string>
+    <string name="action_settings">Configuracion</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

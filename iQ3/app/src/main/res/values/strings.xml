@@ -1,0 +1,244 @@
+<resources>
+    <string name="app_name">iQ3</string>
+
+    <string-array name="conjunto_li">
+        <item>Largo (d)  : </item>
+        <item>Largo (b) : </item>
+        <item>Espesor (t) : </item>
+        <item>k : </item>
+        <item>w/I : </item>
+        <item>A : </item>
+        <item>Ix : </item>
+        <item>Sx : </item>
+        <item>rx : </item>
+        <item>y : </item>
+        <item>ly : </item>
+        <item>Sy : </item>
+        <item>ry : </item>
+        <item>x : </item>
+        <item>rz : </item>
+        <item>Tan α : </item>
+        <item>J : </item>
+        <item>Cw : </item>
+        <item>ro (bar) : </item>
+        <item>H : </item>
+    </string-array>
+    <string-array name="conjunto_ld">
+        <item>Largo (d)  : </item>
+        <item>Largo (b) : </item>
+        <item>Espesor (t) : </item>
+        <item>k : </item>
+        <item>w/I : </item>
+        <item>A : </item>
+        <item>Ix : </item>
+        <item>Sx : </item>
+        <item>rx : </item>
+        <item>y : </item>
+        <item>ly : </item>
+        <item>Sy : </item>
+        <item>ry : </item>
+        <item>x : </item>
+        <item>rz : </item>
+        <item>Tan α : </item>
+        <item>J : </item>
+        <item>Cw : </item>
+        <item>ro (bar) : </item>
+        <item>H : </item>
+    </string-array>
+    <string-array name="conjunto_ce">
+        <item>A : </item>
+        <item>d : </item>
+        <item>tw : </item>
+        <item>bf : </item>
+        <item>tf : </item>
+        <item>T : </item>
+        <item>k (mm): </item>
+        <item>w/I : </item>
+        <item>gage (mm) : </item>
+        <item>x(bar) (mm) : </item>
+        <item>eo (mm) : </item>
+        <item>d/AF (cm^-1) : </item>
+        <item>lx (cm^4) : </item>
+        <item>Sx (cm^3) : </item>
+        <item>rx (cm) : </item>
+        <item>ly (cm^4) : </item>
+        <item>Sy (cm^3) : </item>
+        <item>ry (cm): </item>
+        <item>J (cm^4) : </item>
+        <item>Cw (cm^6) : </item>
+        <item>ro (bar) : </item>
+        <item>H : </item>
+    </string-array>
+    <string-array name="conjunto_ie">
+        <item>A : </item>
+        <item>d : </item>
+        <item>tw : </item>
+        <item>bf : </item>
+        <item>tf : </item>
+        <item>T : </item>
+        <item>k : </item>
+        <item>k1 : </item>
+        <item>w/I : </item>
+        <item>gage : </item>
+        <item>rt : </item>
+        <item>d/AF) : </item>
+        <item>lx : </item>
+        <item>Sx : </item>
+        <item>rx : </item>
+        <item>ly : </item>
+        <item>Sy : </item>
+        <item>ry : </item>
+        <item>Zx : </item>
+        <item>Zy : </item>
+        <item>J : </item>
+        <item>Cw : </item>
+        <item>Wno : </item>
+        <item>Sw : </item>
+        <item>Qf : </item>
+        <item>Qw : </item>
+    </string-array>
+    <string-array name="conjunto_ir">
+        <item>A : </item>
+        <item>d : </item>
+        <item>tw : </item>
+        <item>bf : </item>
+        <item>tf : </item>
+        <item>T : </item>
+        <item>k : </item>
+        <item>k1 : </item>
+        <item>w/I : </item>
+        <item>gage : </item>
+        <item>rt : </item>
+        <item>d/AF : </item>
+        <item>lx : </item>
+        <item>Sx : </item>
+        <item>rx : </item>
+        <item>ly : </item>
+        <item>Sy : </item>
+        <item>ry : </item>
+        <item>Zx : </item>
+        <item>Zy : </item>
+        <item>J : </item>
+        <item>Cw : </item>
+        <item>Wno : </item>
+        <item>Sw : </item>
+        <item>Qf : </item>
+        <item>Qw : </item>
+    </string-array>
+    <string-array name="conjunto_tr">
+        <item>A  : </item>
+        <item>d : </item>
+        <item>tw : </item>
+        <item>bf : </item>
+        <item>tf : </item>
+        <item>k : </item>
+        <item>w/I : </item>
+        <item>lx : </item>
+        <item>Sx : </item>
+        <item>rx : </item>
+        <item>y  : </item>
+        <item>ly : </item>
+        <item>Sy : </item>
+        <item>ry : </item>
+        <item>J : </item>
+        <item>Cw : </item>
+        <item>ro(bar) : </item>
+        <item>H : </item>
+    </string-array>
+    <string-array name="conjunto_2li">
+        <item>d : </item>
+        <item>b : </item>
+        <item>t : </item>
+        <item>k : </item>
+        <item>w/I : </item>
+        <item>A : </item>
+        <item>lx : </item>
+        <item>Sx : </item>
+        <item>rx : </item>
+        <item>y  : </item>
+        <item>ry(0): </item>
+        <item>ry(3/8) : </item>
+        <item>ry(3/4) : </item>
+        <item>ro(bar) : </item>
+        <item>H : </item>
+    </string-array>
+
+    <string-array name="conjunto_or">
+        <item>H  : </item>
+        <item>B  : </item>
+        <item>t : </item>
+        <item>w/I : </item>
+        <item>A : </item>
+        <item>lx  : </item>
+        <item>Sx : </item>
+        <item>rx : </item>
+        <item>ly  : </item>
+        <item>Sy : </item>
+        <item>ry  : </item>
+        <item>Zy  : </item>
+        <item>Zy  : </item>
+        <item>J  : </item>
+    </string-array>
+
+    <string-array name="conjunto_oc">
+        <item>H  : </item>
+        <item>B  : </item>
+        <item>t  : </item>
+        <item>w/I : </item>
+        <item>A  : </item>
+        <item>lx  : </item>
+        <item>Sx  : </item>
+        <item>rx  : </item>
+        <item>ly  : </item>
+    </string-array>
+
+
+    <string-array name="conjunto_perfiles_aisc">
+        <item>Angulo de lados iguales (L)</item>
+        <item>Angulo de lados desiguales (L)</item>
+        <item>Perfil C estándar (C)</item>
+        <item>Perfil I estándar (WT)</item>
+        <item>Perfil I rectangular (M)</item>
+        <item>Perfil T rectangular (W)</item>
+        <item>Perfil I soldado (S)</item>
+        <item>Perfil cruciforme (IC)</item>
+        <item>Redondo solido liso (OS)</item>
+        <item>PTE circular (HSS)</item>
+        <item>PTE rectangular (HSS)</item>
+        <item>Perfil C laminado en frio (CF)</item>
+        <item>Perfil Z laminado en frio (ZF)</item>
+    </string-array>
+
+    <string-array name="conjunto_perfiles_imca">
+        <item>Angulo de lados iguales (LI)</item>
+        <item>Angulo de lados desiguales (LD)</item>
+        <item>Perfil C estándar (CE)</item>
+        <item>Perfil I estándar (IE)</item>
+        <item>Perfil I rectangular (IR)</item>
+        <item>Perfil T rectangular (TR) </item>
+        <item>Perfil I soldado</item>
+        <item>Perfil cruciforme</item>
+        <item>Redondo solido liso</item>
+        <item>PTE circular</item>
+        <item>PTE rectangular</item>
+        <item>Perfil C laminado en frio</item>
+        <item>Perfil Z laminado en frio</item>
+    </string-array>
+
+    <string name="title_activity_manual">Manual</string>
+    <string name="action_settings">Settings</string>
+</resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
