@@ -1,4 +1,4 @@
-package com.havr.iq3.arq.iq3;
+package com.havr.iq3.arq.iq3.Actividades;
 
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,10 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.havr.iq3.arq.iq3.Adaptadores.AdaptadorCot;
+import com.havr.iq3.arq.iq3.Adaptadores.MyAdapterList;
+import com.havr.iq3.arq.iq3.R;
 
 import java.util.ArrayList;
 import java.util.List;

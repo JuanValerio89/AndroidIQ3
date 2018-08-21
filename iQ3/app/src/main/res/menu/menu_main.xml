@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.havr.iq3.arq.iq3.Actividades.Manual">
+    <item
+        android:id="@+id/action_privacidad"
+        android:orderInCategory="100"
+        android:title="Aviso privacidad"
+        android:menuCategory="alternative"
+        app:showAsAction="never" />
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/mayoreo"
+            android:title="Precio mayoreo"
+            android:checked="true"/>
+        <item android:id="@+id/menudeo"
+            android:title="Precio menudeo" />
+    </group>
+</menu>

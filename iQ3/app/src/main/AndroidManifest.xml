@@ -19,13 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Seleccion" />
+        <activity android:name=".Actividades.Seleccion" />
         <activity
-            android:name=".Manual"
+            android:name=".Actividades.Manual"
             android:label="@string/title_activity_manual"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Perfiles" />
-        <activity android:name=".Cotizaciones"></activity>
+        <activity android:name=".Actividades.Perfiles" />
+        <activity android:name=".Actividades.Cotizaciones"></activity>
     </application>
 
 </manifest>

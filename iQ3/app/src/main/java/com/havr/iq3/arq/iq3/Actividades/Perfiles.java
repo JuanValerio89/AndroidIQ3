@@ -1,4 +1,4 @@
-package com.havr.iq3.arq.iq3;
+package com.havr.iq3.arq.iq3.Actividades;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +16,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.havr.iq3.arq.iq3.R;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,10 +32,14 @@ public class Perfiles extends AppCompatActivity {
     public String[] row;
     public String[] Columnas = new String[ 400 ];
     public String[] SpinString = new String[ 400 ];
+    public String[] PrecioMayoreo = new String[20];
+    public String[] PrecioMenudeo = new String[20];
+
     ImageView ImagenPerfiles;
     TextView TipoAngulo;
     String[] PerfilConjunto;
     private List scoreList;
+    private List priceList;
     private Button BtAgregar;
     private String TipoPerfil = "";
     private String WL = "";
@@ -58,17 +64,26 @@ public class Perfiles extends AppCompatActivity {
         Intent intent = getIntent();
         int ValorItem = intent.getIntExtra("Perfil",0);
         String datoPerfil = intent.getStringExtra("SPerfil");
-        TipoPerfil = datoPerfil;
+
         String TipoManual = intent.getStringExtra("Manual");
         TipoAngulo.setText(datoPerfil);
 
         InputStream inputStream;
+        CSVFileprice csvFileprice;
         CSVFile csvFile;
         String listString;
         Resources res = getResources();
         PerfilConjunto = res.getStringArray(R.array.conjunto_ld);
+
+        // Leer el .csv de los precios
+        inputStream = getResources().openRawResource(R.raw.datosprecios);
+        csvFileprice = new CSVFileprice(inputStream);
+        priceList = csvFileprice.read();
+
+        // Elegir el .csv a visualizar
         switch (ValorItem){
             case 0:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[2] + "@" + PrecioMenudeo[2]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_li);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -82,6 +97,7 @@ public class Perfiles extends AppCompatActivity {
                 PerfilConjunto = res.getStringArray(R.array.conjunto_li);
                 break;
             case 1:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[1] + "@" + PrecioMenudeo[1]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_li);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -95,6 +111,7 @@ public class Perfiles extends AppCompatActivity {
                 PerfilConjunto = res.getStringArray(R.array.conjunto_ld);
                 break;
             case 2:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[3]+ "@" + PrecioMenudeo[3]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_ce);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -108,6 +125,7 @@ public class Perfiles extends AppCompatActivity {
                 PerfilConjunto = res.getStringArray(R.array.conjunto_ce);
                 break;
             case 3:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[0] + "@" + PrecioMenudeo[0]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_ce);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -121,6 +139,7 @@ public class Perfiles extends AppCompatActivity {
                 PerfilConjunto = res.getStringArray(R.array.conjunto_ie);
                 break;
             case 4:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[0] + "@" + PrecioMenudeo[0]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_i);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -134,6 +153,7 @@ public class Perfiles extends AppCompatActivity {
                 PerfilConjunto = res.getStringArray(R.array.conjunto_ir);
                 break;
             case 5:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[0] + "@" + PrecioMenudeo[0]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_tr);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -147,6 +167,7 @@ public class Perfiles extends AppCompatActivity {
                 PerfilConjunto = res.getStringArray(R.array.conjunto_tr);
                 break;
             case 6:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[2] + "@" + PrecioMenudeo[2]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_2li);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -160,6 +181,7 @@ public class Perfiles extends AppCompatActivity {
                 PerfilConjunto = res.getStringArray(R.array.conjunto_2li);
                 break;
             case 9:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[4]+ "@" + PrecioMenudeo[4]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_oc);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -173,6 +195,7 @@ public class Perfiles extends AppCompatActivity {
                 PerfilConjunto = res.getStringArray(R.array.conjunto_oc);
                 break;
             case 10:
+                TipoPerfil = datoPerfil + "@" + PrecioMayoreo[5]+ "@" + PrecioMenudeo[5]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_or);
                 Log.d("Perfiles","Info:"+ValorItem);
                 if(TipoManual.equals("IMCA"))
@@ -241,6 +264,7 @@ public class Perfiles extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences settings = getApplicationContext().getSharedPreferences("IQ", 0);
                 String DatosCot = settings.getString(KEY_STRING_PERFILES,"");
+                // Se guarda el peso, tipo de perfil / ( valor del precio) , medidas
                 DatosCot = WL+"@"+TipoPerfil + "@" + SpinOtro[NumeroGuardar] + "," + DatosCot;
                 Log.d(TAG,"Valor WL:"+WL);
                 if(!WL.equals("NO")){
@@ -275,6 +299,44 @@ public class Perfiles extends AppCompatActivity {
                     //Log.d("Perfiles","Haciendo listas:"+csvLine);
                     Columnas[i] = csvLine;
                     i += 1;
+                    resultList.add(row);
+                }
+
+            }
+            catch (IOException ex) {
+                throw new RuntimeException("Error in reading CSV file: "+ex);
+            }
+            finally {
+                try {
+                    inputStream.close();
+                }
+                catch (IOException e) {
+                    throw new RuntimeException("Error while closing input stream: "+e);
+                }
+            }
+            return resultList;
+        }
+    }
+
+    public class CSVFileprice {
+        InputStream inputStream;
+
+        public CSVFileprice(InputStream inputStream){
+            this.inputStream = inputStream;
+        }
+
+        public List read(){
+            List resultList = new ArrayList();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            try {
+                String csvLine;
+                int i = 0;
+                while ((csvLine = reader.readLine()) != null) {
+                    row = csvLine.split(",");
+                    Log.d(TAG,"Precio MAyoreo:"+row[2]);
+                    PrecioMayoreo[i] = row[2];
+                    PrecioMenudeo[i] = row[1];
+                    i = i + 1 ;
                     resultList.add(row);
                 }
 

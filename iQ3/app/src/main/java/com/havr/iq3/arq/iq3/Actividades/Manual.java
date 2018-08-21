@@ -1,4 +1,4 @@
-package com.havr.iq3.arq.iq3;
+package com.havr.iq3.arq.iq3.Actividades;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -7,10 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.havr.iq3.arq.iq3.Adaptadores.MyAdapter;
+import com.havr.iq3.arq.iq3.R;
 
 import java.util.ArrayList;
 import java.util.List;

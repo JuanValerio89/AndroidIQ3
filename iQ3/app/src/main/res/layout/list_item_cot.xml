@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/tx_adap_1"
-        android:layout_width="122dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:gravity="center"
@@ -20,6 +20,7 @@
         android:layout_width="50dp"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
+        android:text="0"
         android:ems="10"
         android:foregroundGravity="center"
         android:gravity="fill_vertical|center_horizontal|center"

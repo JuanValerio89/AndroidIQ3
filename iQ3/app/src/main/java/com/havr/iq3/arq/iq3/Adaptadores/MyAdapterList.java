@@ -1,4 +1,4 @@
-package com.havr.iq3.arq.iq3;
+package com.havr.iq3.arq.iq3.Adaptadores;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.havr.iq3.arq.iq3.R;
 
 import java.util.List;
 
