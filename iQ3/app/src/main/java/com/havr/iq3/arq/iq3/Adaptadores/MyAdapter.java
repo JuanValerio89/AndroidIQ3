@@ -64,31 +64,31 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             int imagen = 0;
             switch (img_res){
                 case 0:
-                    imagen = R.drawable.perfil_li;
+                    imagen = R.drawable.min_li;
                     break;
                 case 1:
-                    imagen = R.drawable.perfil_2li;
+                    imagen = R.drawable.min_2li;
                     break;
                 case 2:
-                    imagen = R.drawable.perfil_ce;
+                    imagen = R.drawable.min_ce;
                     break;
                 case 3:
-                    imagen= R.drawable.perfil_i;
+                    imagen= R.drawable.min_li;
                     break;
                 case 4:
-                    imagen = R.drawable.perfil_i;
+                    imagen = R.drawable.min_li;
                     break;
                 case 5:
-                    imagen = R.drawable.perfil_tr;
+                    imagen = R.drawable.min_tr;
                     break;
                 case 6:
-                    imagen = R.drawable.perfil_or;
+                    imagen = R.drawable.min_or;
                     break;
-                case 9:
-                    imagen = R.drawable.perfil_oc;
+                case 7:
+                    imagen = R.drawable.min_oc;
                     break;
-                case 10:
-                    imagen = R.drawable.perfil_2li;
+                case 8:
+                    imagen = R.drawable.min_2li;
                     break;
             }
             // Procesamos los datos a renderizar

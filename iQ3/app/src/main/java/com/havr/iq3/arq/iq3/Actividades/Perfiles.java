@@ -28,7 +28,8 @@ import java.util.List;
 public class Perfiles extends AppCompatActivity {
 
     private static final String TAG = "PERFILES";
-    public static String KEY_STRING_PERFILES;
+    public static String KEY_STRING_PERFILES_MM;
+    public static String KEY_STRING_PERFILES_IN;
     public String[] row;
     public String[] Columnas = new String[ 400 ];
     public String[] SpinString = new String[ 400 ];
@@ -45,6 +46,7 @@ public class Perfiles extends AppCompatActivity {
     private String WL = "";
     private int NumeroGuardar = 0;
 
+    private boolean TipoBPerfilMM = false;
     //public String[][] Matriz = new String[ 200 ][200];
 
     @Override
@@ -79,7 +81,11 @@ public class Perfiles extends AppCompatActivity {
         inputStream = getResources().openRawResource(R.raw.datosprecios);
         csvFileprice = new CSVFileprice(inputStream);
         priceList = csvFileprice.read();
-
+        if(TipoManual.equals("IMCA")){
+            TipoBPerfilMM = true;
+        }else{
+            TipoBPerfilMM = false;
+        }
         // Elegir el .csv a visualizar
         switch (ValorItem){
             case 0:
@@ -180,7 +186,7 @@ public class Perfiles extends AppCompatActivity {
                 listString = "";
                 PerfilConjunto = res.getStringArray(R.array.conjunto_2li);
                 break;
-            case 9:
+            case 7:
                 TipoPerfil = datoPerfil + "@" + PrecioMayoreo[4]+ "@" + PrecioMenudeo[4]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_oc);
                 Log.d("Perfiles","Info:"+ValorItem);
@@ -194,7 +200,7 @@ public class Perfiles extends AppCompatActivity {
                 listString = "";
                 PerfilConjunto = res.getStringArray(R.array.conjunto_oc);
                 break;
-            case 10:
+            case 8:
                 TipoPerfil = datoPerfil + "@" + PrecioMayoreo[5]+ "@" + PrecioMenudeo[5]; // Almacena el perfil y precio
                 ImagenPerfiles.setImageResource(R.drawable.perfil_or);
                 Log.d("Perfiles","Info:"+ValorItem);
@@ -262,20 +268,38 @@ public class Perfiles extends AppCompatActivity {
         BtAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences settings = getApplicationContext().getSharedPreferences("IQ", 0);
-                String DatosCot = settings.getString(KEY_STRING_PERFILES,"");
-                // Se guarda el peso, tipo de perfil / ( valor del precio) , medidas
-                DatosCot = WL+"@"+TipoPerfil + "@" + SpinOtro[NumeroGuardar] + "," + DatosCot;
-                Log.d(TAG,"Valor WL:"+WL);
-                if(!WL.equals("NO")){
-                    SharedPreferences.Editor editor = settings.edit();
-                    editor.putString(KEY_STRING_PERFILES,DatosCot);
-                    editor.putInt("Piezas", 5);
-                    editor.commit();
-                    Toast.makeText(Perfiles.this, "Se agrego a la cotización",Toast.LENGTH_LONG).show();
+                if(TipoBPerfilMM){
+                    SharedPreferences settings = getApplicationContext().getSharedPreferences("IQ_MM", 0);
+                    String DatosCot = settings.getString(KEY_STRING_PERFILES_MM,"");
+                    // Se guarda el peso, tipo de perfil / ( valor del precio) , medidas
+                    DatosCot = WL+"@"+TipoPerfil + "@" + SpinOtro[NumeroGuardar] + "," + DatosCot;
+                    Log.d(TAG,"Valor WL:"+WL);
+                    if(!WL.equals("NO")){
+                        SharedPreferences.Editor editor = settings.edit();
+                        editor.putString(KEY_STRING_PERFILES_MM,DatosCot);
+                        editor.putInt("Piezas", 5);
+                        editor.commit();
+                        Toast.makeText(Perfiles.this, "Se agrego a la cotización MM",Toast.LENGTH_LONG).show();
+                    }
+                    else
+                        Toast.makeText(Perfiles.this, "No se encontro W/I",Toast.LENGTH_LONG).show();
+                }else{
+                    SharedPreferences settings = getApplicationContext().getSharedPreferences("IQ_IN", 0);
+                    String DatosCot = settings.getString(KEY_STRING_PERFILES_IN,"");
+                    // Se guarda el peso, tipo de perfil / ( valor del precio) , medidas
+                    DatosCot = WL+"@"+TipoPerfil + "@" + SpinOtro[NumeroGuardar] + "," + DatosCot;
+                    Log.d(TAG,"Valor WL:"+WL);
+                    if(!WL.equals("NO")){
+                        SharedPreferences.Editor editor = settings.edit();
+                        editor.putString(KEY_STRING_PERFILES_IN,DatosCot);
+                        editor.putInt("Piezas", 5);
+                        editor.commit();
+                        Toast.makeText(Perfiles.this, "Se agrego a la cotización MM",Toast.LENGTH_LONG).show();
+                    }
+                    else
+                        Toast.makeText(Perfiles.this, "No se encontro W/I",Toast.LENGTH_LONG).show();
                 }
-                else
-                    Toast.makeText(Perfiles.this, "No se encontro W/I",Toast.LENGTH_LONG).show();
+
             }
         });
     }

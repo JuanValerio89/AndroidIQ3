@@ -15,12 +15,13 @@ import com.havr.iq3.arq.iq3.R;
 public class Seleccion extends AppCompatActivity {
 
     Button BtEnviarManual;
-    Button BtCotizacion;
+    Button BtCotizacionMM;
+    Button BtCotizacionIN;
 
     RadioButton BtIMCA;
     RadioButton BtAISC;
 
-
+    public static int DatoMM_IN;
 
     RadioGroup RadioGrupo;
     @Override
@@ -31,7 +32,9 @@ public class Seleccion extends AppCompatActivity {
 
 
         BtEnviarManual = (Button) findViewById(R.id.bt_enviar_manual);
-        BtCotizacion = (Button) findViewById(R.id.bt_cotizaciones);
+        BtCotizacionMM = (Button) findViewById(R.id.bt_cotizaciones_mm);
+        BtCotizacionIN = (Button) findViewById(R.id.bt_cotizaciones_in);
+
         BtIMCA = (RadioButton) findViewById(R.id.radio_imca);
         BtAISC =  (RadioButton) findViewById(R.id.radio_aisc);
         RadioGrupo = (RadioGroup) findViewById(R.id.radio_manual);
@@ -61,18 +64,32 @@ public class Seleccion extends AppCompatActivity {
             }
         });
 
-        BtCotizacion.setOnClickListener(new View.OnClickListener() {
+        BtCotizacionMM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SharedPreferences settings = getApplicationContext().getSharedPreferences("IQ", 0);
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putInt("Piezas", 5);
                 editor.commit();
-
+                DatoMM_IN = 1;
                 Intent Inte = new Intent(Seleccion.this, Cotizaciones.class);
                 startActivity(Inte);
             }
         });
+
+        BtCotizacionIN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences settings = getApplicationContext().getSharedPreferences("IQ", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putInt("Piezas", 1);
+                editor.commit();
+                DatoMM_IN = 2;
+                Intent Inte = new Intent(Seleccion.this, Cotizaciones.class);
+                startActivity(Inte);
+            }
+        });
+
 
 
     }

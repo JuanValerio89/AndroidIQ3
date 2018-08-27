@@ -76,10 +76,10 @@ public class MyAdapterList extends BaseAdapter {
             case 6:
                 imagen.setImageResource(R.drawable.perfil_or);
                 break;
-            case 9:
+            case 7:
                 imagen.setImageResource(R.drawable.perfil_oc);
                 break;
-            case 10:
+            case 8:
                 imagen.setImageResource(R.drawable.perfil_or);
                 break;
         }

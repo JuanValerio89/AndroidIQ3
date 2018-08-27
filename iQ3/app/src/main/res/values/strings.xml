@@ -201,12 +201,12 @@
         <item>Perfil I rectangular (M)</item>
         <item>Perfil T rectangular (W)</item>
         <item>Perfil I soldado (S)</item>
-        <item>Perfil cruciforme (IC)</item>
-        <item>Redondo solido liso (OS)</item>
+        <!-- <item>Perfil cruciforme (IC)</item> -->
+        <!-- <item>Redondo solido liso (OS)</item> -->
         <item>PTE circular (HSS)</item>
         <item>PTE rectangular (HSS)</item>
-        <item>Perfil C laminado en frio (CF)</item>
-        <item>Perfil Z laminado en frio (ZF)</item>
+        <!-- <item>Perfil C laminado en frio (CF)</item> -->
+        <!-- <item>Perfil Z laminado en frio (ZF)</item> -->
     </string-array>
 
     <string-array name="conjunto_perfiles_imca">
@@ -217,12 +217,12 @@
         <item>Perfil I rectangular (IR)</item>
         <item>Perfil T rectangular (TR) </item>
         <item>Perfil I soldado</item>
-        <item>Perfil cruciforme</item>
-        <item>Redondo solido liso</item>
+        <!--  <item>Perfil cruciforme</item> -->
+        <!-- <item>Redondo solido liso</item> -->
         <item>PTE circular</item>
         <item>PTE rectangular</item>
-        <item>Perfil C laminado en frio</item>
-        <item>Perfil Z laminado en frio</item>
+        <!-- <item>Perfil C laminado en frio</item> -->
+        <!--  <item>Perfil Z laminado en frio</item> -->
     </string-array>
 
     <string name="title_activity_manual">Manual</string>

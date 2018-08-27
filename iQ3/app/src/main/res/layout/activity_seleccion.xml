@@ -96,15 +96,27 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/bt_cotizaciones"
+        android:id="@+id/bt_cotizaciones_mm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:drawableLeft="@drawable/cotizar_32"
-        android:text="Cotizaciones "
+        android:text="COT_mm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_cotizaciones_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:drawableLeft="@drawable/cotizar_32"
+        android:text="COT_IN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_cotizaciones_mm" />
 
 </android.support.constraint.ConstraintLayout>
